@@ -6,48 +6,28 @@ namespace CodingChallenges
     {
         public int Fibbonacci(int n)
         {
-            if (n < 0)
-            {
-                throw new Exception("Cannot accept negative numbers");
-            }
-
-            if (n == 0)
-            {
-                return 0;
-            }
-            else if (n == 1)
-            {
-                return 1;
-            }
-            else
-            {
-                return Fibbonacci(n - 1) + Fibbonacci(n - 2);
-            }
+            // Fill out logic in this function to return the nth number of the Fibbonacci sequence.
+            // Negative number results in exception with message: "Cannot accept negative numbers");
+            // f(0) = 0
+            // f(1) = 1
+            // f(n) = associated fibbonacci number (for our testing, we won't do anything greater than 45).
+            throw new NotImplementedException();
         }
 
         public Dictionary<int, string> FizzBuzz()
         {
-            List<int> numbers = new List<int>();
-            for(int i = 1; i < 101; i++)
-            {
-                numbers.Add(i);
-            }
-
-            Dictionary<int, string> result = new Dictionary<int, string>();
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                StringBuilder sb = new StringBuilder();
-                if (numbers[i] % 3 == 0)
-                {
-                    sb.Append("Fizz");
-                }
-                if (numbers[i] % 5 == 0)
-                {
-                    sb.Append("Buzz");
-                }
-                result.Add(numbers[i], sb.ToString());
-            }
-            return result;
+            // Create and return a dictionary with keys 1-100
+            // If the number is divisible by 3, then the associated string will be "Fizz"
+            // If the number is divisible by 5, then the associated string will be "Buzz"
+            // If the number is divisible by both 3 and 5, then the associated string will be "FizzBuzz"
+            // If the number is divisible by neither then the string the associated string will be empty ("")
+            //
+            // For example, the dictionary returned will have the following:
+            // result[2] = ""
+            // result[3] = "Fizz"
+            // result[5] = "Buzz"
+            // result[15] = "FizzBuzz"
+            throw new NotImplementedException();
         }
     }
 }
