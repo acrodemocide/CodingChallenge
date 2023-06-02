@@ -4,6 +4,17 @@ namespace CodingChallenges
 {
     public class CodingChallenge
     {
+        public string Reverse(string str)
+        {
+            // Return a reversed string of the passed in string.
+            // If "abc" is passed in, then this should return "cba."
+            // If an empty string is passed in, return the empty string.
+            // If a single character string is passed in, return that same string (i.e.: "a" reversed is "a").
+            // Every other string should be a reverse of the string passed in.
+            // You cannot use str.Reverse -- an algorithm to reverse the string should be implemented here.
+            throw new NotImplementedException();
+        }
+
         public int Fibbonacci(int n)
         {
             // Fill out logic in this function to return the nth number of the Fibbonacci sequence.
@@ -27,17 +38,6 @@ namespace CodingChallenges
             // result[3] = "Fizz"
             // result[5] = "Buzz"
             // result[15] = "FizzBuzz"
-            throw new NotImplementedException();
-        }
-
-        public string Reverse(string str)
-        {
-            // Return a reversed string of the passed in string.
-            // If "abc" is passed in, then this should return "cba."
-            // If an empty string is passed in, return the empty string.
-            // If a single character string is passed in, return that same string (i.e.: "a" reversed is "a").
-            // Every other string should be a reverse of the string passed in.
-            // You cannot use str.Reverse -- an algorithm to reverse the string should be implemented here.
             throw new NotImplementedException();
         }
     }
