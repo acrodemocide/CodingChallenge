@@ -40,5 +40,37 @@ namespace CodingChallenges
             // result[15] = "FizzBuzz"
             throw new NotImplementedException();
         }
+
+        public string ConvertArabicToRomanNumerals(int n)
+        {
+            // Convert the integer to a roman numeral.
+            // The accepted input is 1 to 3999 inclusive.
+            // If the number falls outside of that range, throw an exception with the message: "Number outside of range."
+            // Roman Numerals:
+            // I = 1
+            // V = 5
+            // X = 10
+            // L = 50
+            // C = 100
+            // D = 500
+            // M = 1,000
+            // Note, there are never more than 3 identical numerals in a row (i.e.: you'll never see IIII or VVVV).
+
+            // The pattern is as follows:
+            // I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV (1 - 14)
+            // X, XX, XXX, XL, L, LX, LXX, LXXX, XC, C (10 - 100 -- counting by 10s)
+
+            // A couple more examples:
+            // 1666 = MDCLXVI -> M = 1000, D = 500, C = 100, L = 50, X = 10, V = 5, I = 1
+            //      => 1000 + 500 + 100 + 50 + 10 + 5 + 1 = 1666
+            // 1990 = MCMXC -> M = 1000, CM = 900, XC = 90
+            
+            // Take special note of 4, 9, 40, 90, 400, and 900 -- these use a smaller symbol on the left to subtract from
+            //  the bigger symbol on the right.
+            // 4 = IV, 9 = IX, 40 = XL, 90 = XC, 400 = CD, 900 = CM. In the case of 4 = IV, V = 5, and I = 1, we subtract
+            //  1 from 5 to get 4. In the case of 400 = CD, we have C = 100 and D = 500, and we subtract 100 from 500 to get
+            //  400.
+            throw new NotImplementedException();
+        }
     }
 }

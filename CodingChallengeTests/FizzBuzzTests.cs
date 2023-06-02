@@ -33,30 +33,38 @@ namespace CodingChallengeTests
         [TestMethod]
         public void TestGeneralNumbers()
         {
-            var fizz = "Fizz";
-            var buzz = "Buzz";
-            var fizzBuzz = fizz + buzz;
+            int[] fizzNumbers = { 3, 6, 9, 12, 18, 21, 24, 27, 33, 36, 39, 42, 48, 51, 54, 57, 63, 66, 69, 72, 78, 81, 84, 87, 93, 99 };
+            int[] buzzNumbers = { 5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95 };
+            int[] fizzBuzzNumbers = {15, 30, 45, 60, 75, 90};
 
-            var result = _codingChallenge.FizzBuzz();
-
-            for(int i = 1; i <= 100; i++)
+            List<int> remainingNumbers = new List<int>();
+            for (int i = 1; i <= 100; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (!fizzNumbers.Contains(i) && !buzzNumbers.Contains(i) && !fizzBuzzNumbers.Contains(i))
                 {
-                    Assert.AreEqual(result[i], fizzBuzz);
+                    remainingNumbers.Append(i);
                 }
-                else if (i % 3 == 0)
-                {
-                    Assert.AreEqual(result[i], fizz);
-                }
-                else if (i % 5 == 0)
-                {
-                    Assert.AreEqual(result[i], buzz);
-                }
-                else
-                {
-                    Assert.AreEqual(result[i], string.Empty);
-                }
+            }
+
+            var actual = _codingChallenge.FizzBuzz();
+            foreach(int n in fizzNumbers)
+            {
+                Assert.AreEqual(actual[n], "Fizz");
+            }
+
+            foreach(int n in buzzNumbers)
+            {
+                Assert.AreEqual(actual[n], "Buzz");
+            }
+
+            foreach(int n in fizzBuzzNumbers)
+            {
+                Assert.AreEqual(actual[n], "FizzBuzz");
+            }
+
+            foreach(int n in remainingNumbers)
+            {
+                Assert.AreEqual(actual[n], "");
             }
         }
     }
