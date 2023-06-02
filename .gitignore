@@ -51,6 +51,8 @@ ipch/
 *.opensdf
 *.sdf
 *.cachefile
+*.vsidx
+*.cache
 
 # Visual Studio profiler
 *.psess
