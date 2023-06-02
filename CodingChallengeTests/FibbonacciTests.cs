@@ -7,8 +7,7 @@ namespace CodingChallengeTests
     {
         private CodingChallenge _codingChallenge;
 
-        [TestInitialize]
-        public void Initialize()
+        public FibbonacciTests()
         {
             _codingChallenge = new CodingChallenge();
         }
