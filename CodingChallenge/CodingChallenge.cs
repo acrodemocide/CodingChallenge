@@ -29,5 +29,16 @@ namespace CodingChallenges
             // result[15] = "FizzBuzz"
             throw new NotImplementedException();
         }
+
+        public string Reverse(string str)
+        {
+            // Return a reversed string of the passed in string.
+            // If "abc" is passed in, then this should return "cba."
+            // If an empty string is passed in, return the empty string.
+            // If a single character string is passed in, return that same string (i.e.: "a" reversed is "a").
+            // Every other string should be a reverse of the string passed in.
+            // You cannot use str.Reverse -- an algorithm to reverse the string should be implemented here.
+            throw new NotImplementedException();
+        }
     }
 }
